@@ -31,9 +31,9 @@ pomIncludeRepository := { _ => false }
 
 licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
-homepage := Some(url("https://github.com/nestorpersist/json"))
+homepage := Some(url("https://github.com/nestorpersist/units"))
 
-scmInfo := Some(ScmInfo(url("https://github.com/nestorpersist/json"), "scm:git@github.com:nestorpersist/json.git"))
+scmInfo := Some(ScmInfo(url("https://github.com/nestorpersist/units"), "scm:git@github.com:nestorpersist/units.git"))
 
 pomExtra := (
   <developers>
