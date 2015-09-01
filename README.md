@@ -3,3 +3,5 @@ Scala Unit of Measure Types
 
 See [Demo.sc](https://github.com/nestorpersist/units/blob/master/src/test/scala/com/persist/Demo.sc)
 for examples of use.
+
+This work has been supported by [47 Degrees](http://www.47deg.com/), an international Scala and Spark training and consulting company.
