@@ -22,12 +22,12 @@ case class U[m1 <: Meters, g1 <: Grams, s1 <: Seconds, a1 <: Amperes, b1 <: Bits
     v / other.v
   }
 
-  def *[m2 <: Integer, g2 <: Integer, s2 <: Integer, a2 <: Amperes, b2 <: Bits, d2 <: Dollars](other: U[m2, g2, s2, a2, b2, d2]) = {
-    U[m2#inc[m1], g2#inc[g1], s2#inc[s1], a2#inc[a1], b2#inc[b1], d2#inc[d1]](v * other.v)
+  def *[m2 <: Meters, g2 <: Grams, s2 <: Seconds, a2 <: Amperes, b2 <: Bits, d2 <: Dollars](other: U[m2, g2, s2, a2, b2, d2]) = {
+    U[m2#add[m1], g2#add[g1], s2#add[s1], a2#add[a1], b2#add[b1], d2#add[d1]](v * other.v)
   }
 
-  def /[m2 <: Integer, g2 <: Integer, s2 <: Integer, a2 <: Amperes, b2 <: Bits, d2 <: Dollars](other: U[m2, g2, s2, a2, b2, d2]) = {
-    U[m2#dec[m1], g2#dec[g1], s2#dec[s1], a2#dec[a1], b2#dec[b1], d2#dec[d1]](v / other.v)
+  def /[m2 <: Meters, g2 <: Grams, s2 <: Seconds, a2 <: Amperes, b2 <: Bits, d2 <: Dollars](other: U[m2, g2, s2, a2, b2, d2]) = {
+    U[m2#sub[m1], g2#sub[g1], s2#sub[s1], a2#sub[a1], b2#sub[b1], d2#sub[d1]](v / other.v)
   }
 
   private def dim(name: String, s0: String) = {

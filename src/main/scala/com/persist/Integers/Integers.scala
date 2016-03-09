@@ -3,39 +3,39 @@ package com.persist.Integers
 trait Integer {
   type prev <: Integer
   type next <: Integer
-  type inc[other <: Integer] <: Integer
-  type dec[other <: Integer] <: Integer
+  type add[other <: Integer] <: Integer
+  type sub[other <: Integer] <: Integer
 }
 
 class PosTooBig extends Integer {
   type prev = PosTooBig
   type next = PosTooBig
-  type inc[other <: Integer] = PosTooBig
-  type dec[other <: Integer] = PosTooBig
+  type add[other <: Integer] = PosTooBig
+  type sub[other <: Integer] = PosTooBig
 }
 
 class NegTooBig extends Integer {
   type prev = NegTooBig
   type next = NegTooBig
-  type inc[other <: Integer] = NegTooBig
-  type dec[other <: Integer] = NegTooBig
+  type add[other <: Integer] = NegTooBig
+  type sub[other <: Integer] = NegTooBig
 }
 
 trait Pos extends Integer {
-  type inc[other <: Integer] = prev#inc[other#next]
-  type dec[other <: Integer] = prev#dec[other#prev]
+  type add[other <: Integer] = prev#add[other#next]
+  type sub[other <: Integer] = prev#sub[other#prev]
 }
 
 class Z extends Integer {
   type prev = N1
   type next = P1
-  type inc[other <: Integer] = other
-  type dec[other <: Integer] = other
+  type add[other <: Integer] = other
+  type sub[other <: Integer] = other
 }
 
 trait Neg extends Integer {
-  type inc[other <: Integer] = next#inc[other#prev]
-  type dec[other <: Integer] = next#dec[other#next]
+  type add[other <: Integer] = next#add[other#prev]
+  type sub[other <: Integer] = next#sub[other#next]
 }
 
 class P1 extends Pos {

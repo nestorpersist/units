@@ -12,8 +12,8 @@ object IntellijBug {
     // Show correctly displays meter:6
     println(c2.show)
 
-    // In Intellij second inc is in red!
-    val c3 = U[P2#inc[P2]#inc[P2],Z,Z,Z,Z,Z](5.1)
+    // In Intellij inc is in red!
+    val c3 = U[P2#add[P2]#inc[P2],Z,Z,Z,Z,Z](5.1)
     // Show works and displays meter:6
     println(c3.show)
 
