@@ -2,16 +2,15 @@ name := "scala-units"
 
 organization := "com.persist"
 
-version := "1.0.0"
+version := "1.1.0"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.0"
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 libraryDependencies ++= Seq(
         "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-        "org.scalatest" %% "scalatest" % "2.2.4" % "test",
-        //"org.specs2" %% "specs2-core" % "3.6.2" % "test",
+        "org.scalatest" %% "scalatest" % "3.0.0" % "test",
         "junit" % "junit" % "4.12" % "test"
 )
 

@@ -2,6 +2,7 @@ package com.persist
 
 import com.persist.Integers._
 
+/*
 object IntellijBug {
   def main(args: Array[String]): Unit = {
 
@@ -21,3 +22,4 @@ object IntellijBug {
 
 
 }
+*/
