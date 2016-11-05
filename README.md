@@ -6,6 +6,6 @@ for examples of use.
 
 It can be included from Maven Central via
 
-    "com.persist" % "scala-units_2.11" % "1.0.0"
+    "com.persist" % "scala-units_2.12" % "1.1.0"
 
 This work has been supported by [47 Degrees](http://www.47deg.com/), an international Scala and Spark training and consulting company.
