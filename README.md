@@ -1,4 +1,7 @@
 # Units
+
+[![Latest version](https://index.scala-lang.org/nestorpersist/units/scala-units/latest.svg)](https://index.scala-lang.org/nestorpersist/units/scala-units)
+
 Scala Unit of Measure Types
 
 See [Demo.sc](https://github.com/nestorpersist/units/blob/master/src/test/scala/com/persist/Demo.sc)
